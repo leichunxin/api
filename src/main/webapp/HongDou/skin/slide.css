@@ -1,0 +1,74 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.zzsc li a
+{
+}
+.zzsc li
+{
+    height: 76px;
+    line-height: 76px;
+    float: left;
+}
+.zzsc li .second
+{
+    position: absolute;
+    left: 0;
+    line-height: 25px;
+    display: none;
+    border: 2px solid #e33143;
+    background: white;
+}
+.nav-box
+{
+    float: left;
+    position: relative;
+    z-index: 9999;
+}
+.nav-box ul li
+{
+    list-style: none;
+    position: relative;
+    float: left;
+    height: 76px;
+    line-height: 76px;
+    width: 100px;
+    text-align: center;
+    font-family: 微软雅黑;
+}
+.nav-box ul li:hover
+{
+}
+.nav-box ul li .second
+{
+    width: 320px;
+    position: absolute;
+    left: 0;
+    line-height: 25px;
+    display: none;
+    border: 2px solid #e33143;
+    background: white;
+    font-size: 14px;
+    z-index: 1000;
+}
+.nav-box .nav-line
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    line-height: 2px;
+    font-size: 0;
+    width: 100px;
+    background: #e33143;
+}
+#myFocus
+{
+    width: 1190px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
