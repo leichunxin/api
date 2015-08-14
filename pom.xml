@@ -169,7 +169,7 @@
 		         </configuration>
 				<!-- </dependency> -->
 			</plugin>		
-		 <plugin>          
+		 <!-- <plugin>          
 		    <groupId>org.apache.maven.plugins</groupId>
 		    <artifactId>maven-javadoc-plugin</artifactId>
 		    <version>2.9.1</version>
@@ -181,37 +181,7 @@
 		          </goals>
 		      </execution>
 		    </executions>
-		  </plugin>   
-		<plugin>
-		    <artifactId>maven-assembly-plugin</artifactId>
-			<executions>  <!-- 执行器 mvn assembly:assembly -->
-				<execution>
-					<id>pack-center</id><!-- 名字任意 -->
-					<phase>package</phase><!-- 绑定到package生命周期阶段上 -->
-					<goals>
-					   <goal>single</goal><!-- 只运行一次 -->
-					</goals>
-					<configuration>
-							 <descriptors> 描述文件路径
-								  <descriptor>src/main/resources/pack-center.xml</descriptor>
-							</descriptors>
-					</configuration>
-				</execution>
-			</executions>
-		 </plugin>
+		  </plugin> -->   
 		</plugins>
 	</build>
-	 <distributionManagement>  
-        <repository>  
-            <id>releases</id>  
-            <name>User Project Release</name>  
-            <url>http://localhost:8081/nexus/content/repositories/releases/</url>  
-        </repository>  
-  
-        <snapshotRepository>  
-            <id>snapshots</id>  
-            <name>User Project SNAPSHOTS</name>  
-            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>  
-        </snapshotRepository>  
-    </distributionManagement>
 </project>
