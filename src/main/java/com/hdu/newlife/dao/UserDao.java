@@ -8,5 +8,5 @@ public interface UserDao {
 	int getUser() throws SQLException;
 
 	List<Object> getAll() throws SQLException;
-
+	
 }

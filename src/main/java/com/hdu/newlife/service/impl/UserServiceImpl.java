@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.hdu.newlife.bean.ErrorBean;
+import com.hdu.newlife.bean.UserBean;
 import com.hdu.newlife.bean.UserListBean;
 import com.hdu.newlife.dao.UserDao;
 import com.hdu.newlife.dao.impl.UserDaoImpl;
@@ -31,6 +32,16 @@ public class UserServiceImpl implements UserService {
 			userListBean.setError(new ErrorBean(e.getMessage()));
 		}
 		return userListBean;
+	}
+
+	@Override
+	public UserBean getById(int id) {
+		System.out.println("from db ...");
+		UserBean userBean = new UserBean();
+		userBean.setId(id);
+		userBean.setUsername("username" + id);
+		userBean.setPassword("password" + id);
+		return userBean;
 	}
 
 }
