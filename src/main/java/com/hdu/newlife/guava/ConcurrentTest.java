@@ -20,7 +20,6 @@ public class ConcurrentTest {
 		// 原生的Future模式,实现异步
 		ExecutorService nativeExecutor = Executors.newSingleThreadExecutor();
 		Future<String> nativeFuture = nativeExecutor.submit(new Callable<String>() {
-
 			@Override
 			public String call() throws Exception {
 				// 使用sleep模拟调用耗时
@@ -45,7 +44,6 @@ public class ConcurrentTest {
 
 		// 注册监听器,即异步调用完成时会在指定的线程池中执行注册的监听器
 		listenableFuture.addListener(new Runnable() {
-
 			@Override
 			public void run() {
 				try {
@@ -61,7 +59,6 @@ public class ConcurrentTest {
 		// 除了ListenableFuture,guava还提供了FutureCallback接口,相对来说更加方便一些.
 		ListeningExecutorService guavaExecutor2 = MoreExecutors.listeningDecorator(Executors.newSingleThreadExecutor());
 		final ListenableFuture<String> listenableFuture2 = guavaExecutor2.submit(new Callable<String>() {
-
 			@Override
 			public String call() throws Exception {
 				Thread.sleep(1000);
@@ -71,13 +68,11 @@ public class ConcurrentTest {
 		});
 		// 注意这里没用指定执行回调的线程池,从输出可以看出，默认是和执行异步操作的线程是同一个.
 		Futures.addCallback(listenableFuture2, new FutureCallback<String>() {
-
 			@Override
 			public void onSuccess(String result) {
 				System.out.println("async callback(using FutureCallback) result:" + result);
 				System.out.println("execute callback threadName:" + Thread.currentThread().getName());
 			}
-
 			@Override
 			public void onFailure(Throwable t) {
 			}
