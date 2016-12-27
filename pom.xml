@@ -21,7 +21,7 @@
         <!-- for maven compiler plugin -->
         <skip_maven_deploy>true</skip_maven_deploy>
         <!-- <zdal.version>0.0.1-SNAPSHOT</zdal.version> -->
-        <rocketmq_version>3.2.7.20151226</rocketmq_version>
+        <rocketmq_version>3.6.2.Final</rocketmq_version>
 	</properties>
 
 	<dependencies>
