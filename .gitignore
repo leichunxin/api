@@ -10,3 +10,5 @@ target/
 .idea
 .mymetadata
 .gitattributes
+logs/
+log/
